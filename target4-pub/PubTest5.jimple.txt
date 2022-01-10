@@ -1,0 +1,45 @@
+class PubTest5 extends java.lang.Object
+{
+/*PubTest5.java*/
+    static int randInt;
+    static int a;
+    void <init>()
+    {
+        PubTest5 r0;
+        r0 := @this: PubTest5;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+    static void main()
+    {
+    in00    $i0 = staticinvoke <iiscPavUtil: int random()>(); // S1
+    in01    <PubTest5: int randInt> = $i0;
+    in02    $i1 = <PubTest5: int randInt>;
+    in03    if $i1 != 1 goto label1;
+    in04    <PubTest5: int a> = 1;
+    in05    staticinvoke <PubTest5: void foo()>();      // S2
+    in06    goto label2;
+    in07 label1:
+            <PubTest5: int a> = 2;
+    in08    staticinvoke <PubTest5: void foo()>();      // S3
+    in09 label2:
+            return;
+    }
+    static void foo()
+    {
+    in00    $i0 = <PubTest5: int a>;
+    in01    if $i0 != 1 goto label1;
+    in02    staticinvoke <PubTest5: void bar()>();      // S4
+    in03    return;
+    in04 label1:
+            staticinvoke <PubTest5: void bar()>();      // S5
+    in05    return;
+    }
+    static void bar()
+    {
+    in00    $i0 = <PubTest5: int a>;
+    in01    $i1 = $i0 + 1;
+    in02    <PubTest5: int a> = $i1;
+    in03    return;
+    }
+}

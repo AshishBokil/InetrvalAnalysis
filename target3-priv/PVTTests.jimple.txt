@@ -1,0 +1,35 @@
+tmethod: <PVTTests: void pvttest1()>
+****tmethodname: pvttest1
+
+in00:        $i3 = (int) -5
+in01:        i0 = $i3
+in02:        $i5 = (int) -10
+in03:        i1 = $i5
+in04:     label1:
+             if i0 >= 100 goto label3
+in05:        if i1 >= 80 goto label3
+in06:        if i1 < i0 goto label2
+in07:     label2:
+             i0 = i0 + 1
+in08:        i1 = i1 + 2
+in09:        goto label1
+in10:     label3:
+             return
+
+=================================================
+
+tmethod: <PVTTests: void pvttest2()>
+****tmethodname: pvttest2
+
+in00:        $i2 = (int) -2
+in01:        i0 = $i2
+in02:     label1:
+             $i4 = (int) -20
+in03:        if $i4 >= i0 goto label2
+in04:        i0 = i0 - 1
+in05:        goto label1
+in06:     label2:
+           return
+
+=================================================
+

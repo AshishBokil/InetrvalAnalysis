@@ -1,0 +1,208 @@
+Stmt: (main,$i1 = <PubTest5: int randInt>)
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+
+Stmt: (bar,$i1 = $i0 + 1)
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 2
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 4
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+
+Stmt: (main,goto [?= return])
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <1,1>
+PubTest5.a : <1,1>
+
+Stmt: (main,staticinvoke <PubTest5: void foo()>())
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <-2147483648,2147483647>
+PubTest5.a : <2,2>
+
+Stmt: (main,<PubTest5: int randInt> = $i0)
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+
+Stmt: (foo,staticinvoke <PubTest5: void bar()>())
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 5
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 8
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+
+Stmt: (main,return)
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+
+Stmt: (main,staticinvoke <PubTest5: void foo()>())
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <1,1>
+PubTest5.a : <1,1>
+
+Stmt: (foo,staticinvoke <PubTest5: void bar()>())
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 5
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <1,1>
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 8
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <1,1>
+
+Stmt: (foo,return)
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 5
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 8
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+
+Stmt: (main,if $i1 != 1 goto <PubTest5: int a> = 2)
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+
+Stmt: (foo,if $i0 != 1 goto staticinvoke <PubTest5: void bar()>())
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 5
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 8
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+
+Stmt: (bar,return)
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 2
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 4
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+
+Stmt: (bar,$i0 = <PubTest5: int a>)
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 2
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 4
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+
+Stmt: (foo,return)
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 5
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <1,1>
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 8
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <1,1>
+
+Stmt: (main,<PubTest5: int a> = 2)
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <-2147483648,2147483647>
+PubTest5.a : <2,2>
+
+Stmt: (bar,<PubTest5: int a> = $i1)
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 2
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+CallString: (foo,staticinvoke <PubTest5: void bar()>()) 4
+-------------------------------------
+$i1 : <-2147483648,2147483647>
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+
+Stmt: (main,$i0 = staticinvoke <iiscPavUtil: int random()>())
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <-2147483648,2147483647>
+PubTest5.a : <-2147483648,2147483647>
+
+Stmt: (foo,$i0 = <PubTest5: int a>)
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 5
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+CallString: (main,staticinvoke <PubTest5: void foo()>()) 8
+-------------------------------------
+PubTest5.randInt : <-2147483648,2147483647>
+PubTest5.a : <1,2>
+$i0 : <-2147483648,2147483647>
+
+Stmt: (main,<PubTest5: int a> = 1)
+CallString: @
+-------------------------------------
+$i0 : <-2147483648,2147483647>
+PubTest5.randInt : <-2147483648,2147483647>
+$i1 : <1,1>
+PubTest5.a : <1,1>
+
